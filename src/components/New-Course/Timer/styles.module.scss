@@ -1,0 +1,88 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #6154f9 0%, #7f56d9 100%);
+  color: #fff;
+  padding: 10px 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 110px;
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; // Ajusta os itens para quebra em várias linhas, se necessário
+
+    span {
+      font-size: 16px;
+      font-family: Montserrat;
+
+      del {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: Montserrat;
+      }
+
+      strong {
+        color: #ffffff;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .button {
+    background: #0d0f14;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: Montserrat;
+
+    &:hover {
+      background: #141821;
+    }
+  }
+
+  // Ajustes para telas menores
+  @media (max-width: 768px) {
+    flex-direction: column; // Empilha os elementos verticalmente
+    gap: 15px;
+
+    .info {
+      justify-content: center; // Centraliza o texto em telas pequenas
+      text-align: center;
+
+      span {
+        font-size: 14px; // Diminui o tamanho da fonte
+      }
+    }
+
+    .button {
+      width: 100%; // Botão ocupa toda a largura disponível
+      text-align: center;
+    }
+  }
+
+  // Ajustes para telas muito pequenas
+  @media (max-width: 480px) {
+    padding: 10px;
+
+    .info {
+      gap: 10px;
+
+      span {
+        font-size: 12px; // Reduz ainda mais o texto
+      }
+    }
+
+    .button {
+      font-size: 14px; // Reduz o tamanho da fonte do botão
+      padding: 8px 16px; // Ajusta o espaçamento interno do botão
+    }
+  }
+}

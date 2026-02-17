@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                   String    @id
+  name                 String
+  email                String
+  phone                String
+  isActive             Boolean   @default(true)
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime
+  firstSignatureDate   DateTime?
+  currentSignatureDate DateTime?
+  renewSignatureDate   DateTime?
+  paymentMethod        String?
+  pricePaid            String?   @default("1")
+  cancelled            Boolean   @default(false)
+}
+
+model UserWebsite {
+  id        String   @id @default(uuid())
+  name      String
+  url       String
+  email     String
+  pixKey    String
+  pixType   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UserBudget {
+  id        String   @id @default(uuid())
+  name      String?
+  email     String
+  phone     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UserFreeFire {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  phone       String
+  dateOfBirth DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model UserLucia {
+  id    String @id @default(uuid())
+  name  String
+  email String
+  phone String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+ model accessToken {
+        id         Int    @id @default(autoincrement())
+        token      String?
+        refreshToken String?
+        expiresAt DateTime?
+    }

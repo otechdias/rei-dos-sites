@@ -1,0 +1,197 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  align-items: center;
+  padding-block: 50px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-inline: 20px;
+    gap: 40px;
+  }
+
+  img {
+    &.rotate {
+      position: absolute;
+      top: -5%;
+      right: -1%;
+      z-index: 10;
+      width: 150px;
+      animation: rotate 15s linear infinite;
+      @media screen and (max-width: 768px) {
+        width: 100px;
+        top: 39%;
+        right: -4%;
+      }
+    }
+  }
+}
+.leftside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    span {
+      color: rgba(162, 158, 177, 0.8);
+      padding-inline: 5px;
+    }
+  }
+  h5 {
+    color: rgba(230, 228, 237, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .filled {
+    text-transform: uppercase;
+    background-color: #4b3cff;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #675aff;
+      color: #fff;
+      transform: translateY(-3px); /* Eleva levemente o botão */
+      box-shadow: 0 4px 15px rgba(75, 60, 255, 0.5); /* Efeito de brilho */
+    }
+
+    &:active {
+      transform: translateY(0); /* Remove a elevação ao clicar */
+      box-shadow: none;
+    }
+  }
+
+  button {
+    text-transform: uppercase;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      color: #4b3cff;
+      transform: scale(1.05); /* Leve aumento no tamanho */
+      background: rgba(75, 60, 255, 0.1); /* Fundo translúcido */
+      box-shadow: 0 4px 15px rgba(75, 60, 255, 0.5); /* Efeito de brilho */
+    }
+
+    &:active {
+      transform: scale(1); /* Reduz ao tamanho original */
+      box-shadow: none;
+    }
+  }
+}
+.rightside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.buttons2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .filled {
+    text-transform: uppercase;
+    background-color: #4b3cff;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    background-color: #4b3cff;
+    border: none;
+    cursor: pointer;
+  }
+  button {
+    text-transform: uppercase;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

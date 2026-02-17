@@ -1,0 +1,114 @@
+.container {
+  background: #040122;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-inline: auto;
+  margin-top: 50px;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+    padding-inline: 39px;
+  }
+  h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 51.2px;
+    @media screen and (max-width: 768px) {
+      text-align: left;
+      font-size: 26px;
+      line-height: 33px;
+      letter-spacing: -1.5px;
+    }
+    span {
+      position: relative;
+      display: inline;
+      background: linear-gradient(
+        270deg,
+        #00c2ff,
+        #33ff8c,
+        #ffc640,
+        #e54cff,
+        #00c2ff,
+        #33ff8c
+      );
+      background-size: 600% auto;
+      color: transparent;
+      // -webkit-text-fill-color: transparent;
+      background-clip: text;
+      // -webkit-background-clip: text;
+      animation: shift 5s linear infinite;
+    }
+  }
+}
+
+.swiper {
+  padding-block: 30px;
+  margin-block: 30px;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  img {
+    border: none;
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+    @media screen and (max-width: 768px) {
+      width: 300px;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  button {
+    border-radius: 3px;
+    background: #1a04ae;
+    box-shadow: 0px 10px 50px 0px rgba(26, 4, 174, 0.61);
+    padding-inline: 100px;
+    padding-block: 20px;
+    border: none;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+      padding-inline: 55px;
+    }
+  }
+  p {
+    color: #fff;
+    text-align: center;
+    font-family: Syne;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes shift {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

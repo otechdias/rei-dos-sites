@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `User` ADD COLUMN `pricePaid` VARCHAR(191) NULL DEFAULT '1';

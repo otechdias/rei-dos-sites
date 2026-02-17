@@ -1,0 +1,128 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  align-items: center;
+  padding-block: 50px;
+  gap: 40px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 20px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1e1e1e;
+    font-family: Montserrat;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  p {
+    color: #6154f9;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+    h5 {
+      color: rgba(30, 30, 30, 0.7);
+      font-size: 20px;
+      font-weight: 400;
+      font-family: Montserrat;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .faq {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(97, 84, 249, 0.1);
+    box-shadow: 0 2px 8px rgba(97, 84, 249, 0.05);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(97, 84, 249, 0.1);
+    }
+
+    &.active {
+      background: rgba(97, 84, 249, 0.02);
+      border-color: #6154f9;
+      box-shadow: 0 4px 15px rgba(97, 84, 249, 0.1);
+    }
+
+    .question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1e1e1e;
+      gap: 10px;
+
+      span {
+        font-weight: 700;
+        color: rgba(30, 30, 30, 0.7);
+      }
+
+      .icon {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+
+        &.rotate {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .answer {
+      h5 {
+        color: rgba(30, 30, 30, 0.8);
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Montserrat;
+        text-align: left;
+        width: 95%;
+      }
+      margin-top: 10px;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+  }
+}
+
+.leftQ {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  h4 {
+    color: #1e1e1e;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Montserrat;
+  }
+}

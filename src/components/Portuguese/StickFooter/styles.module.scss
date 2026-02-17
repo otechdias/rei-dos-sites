@@ -1,0 +1,125 @@
+.container {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    z-index: 999; // Garantir que o container esteja em um nível adequado
+    visibility: hidden;
+
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 137px;
+        position: fixed;
+        bottom: -1px;
+        z-index: 998; // Certifique-se de que está abaixo do botão
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.7) 72.61%,
+            #000 130%
+        );
+    }
+}
+
+.content {
+    gap: 20px;
+    align-items: center;
+    position: relative; // Garante que os filhos sigam o contexto correto
+    z-index: 1000; // Prioridade maior que o ::after
+    @media screen and (max-width: 768px) {
+        gap: 45px;
+        padding-inline: 20px;
+    }
+
+    .button {
+        position: relative; // Evita criar novo stacking context
+        z-index: 1001;
+        margin-inline: 20%;
+
+        @media only screen and (max-width: 768px) {
+            margin-inline: 0px;
+        }
+        button {
+            border-radius: 3px;
+            z-index: 1001;
+            width: 100%;
+            margin-left: auto;
+            background: linear-gradient(
+                91deg,
+                #0025ff -20%,
+                #00a1ff 50%,
+                #0025ff 120%
+            );
+            background-size: 300% 300%;
+
+            box-shadow: 0px 10px 50px 0px rgba(75, 60, 255, 0.56);
+            border: none;
+            padding-block: 20px;
+            padding-inline: 20px;
+            align-items: center;
+            gap: 9px;
+            cursor: pointer;
+            animation: gradientCircle 4s linear infinite;
+
+            transition: box-shadow 0.5s ease-in-out;
+
+            @media screen and (max-width: 768px) {
+                padding-block: 13px;
+                padding-inline: 20px;
+                width: 100%;
+            }
+
+            &:hover {
+                box-shadow: 0 0 50px #1a04ae;
+                background-color: #4b3cff;
+            }
+
+            p {
+                color: #fff;
+                font-family: Syne;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 600;
+                text-transform: uppercase;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                img {
+                    width: 25px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes gradientCircle {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}

@@ -1,0 +1,71 @@
+.accordionItem {
+  color: #fff; // White text color
+  border-radius: 0;
+  margin-bottom: 1em;
+  overflow: hidden;
+  box-shadow: none; // No box shadow
+  border-bottom: 2px solid #4b3cff;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordionToggle {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  color: #fff;
+  font-family: Syne;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+  transition: background-color 1s ease;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon {
+  display: inline-block; // Ensure that the icon is inline
+  margin-left: 0.5em; // Space out the icon from the title
+  color: #4b3cff; // Set your desired color for the icon
+  font-size: 2em; // Set the desired size
+  transition: transform 1s ease; // Keep the smooth transition for rotating the icon
+  line-height: 1; // Adjust line height to control vertical alignment
+  vertical-align: middle; // Aligns the icon vertically with the middle of the text
+}
+
+.accordionContent {
+  padding: 1em;
+  color: #fff;
+  font-family: Syne;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease; // Smooth transition for max-height
+  padding: 0 1em;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.show {
+  max-height: 50px;
+  @media screen and (max-width: 768px) {
+    max-height: 70px;
+  }
+}

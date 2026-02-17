@@ -1,0 +1,122 @@
+.container {
+    background: #030303;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    position: relative;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-block: 30px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 100px;
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            span {
+                color: #034cff;
+            }
+        }
+
+        p {
+            color: rgba(215, 215, 215, 0.5);
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
+
+.swiperContainer {
+    position: relative;
+    color: white;
+    background: #030303;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .gradientLeft,
+    .gradientRight {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .gradientLeft {
+        left: 0;
+        background: linear-gradient(
+            to right,
+            rgba(3, 3, 3, 1),
+            rgba(3, 3, 3, 0)
+        );
+    }
+
+    .gradientRight {
+        right: 0;
+        background: linear-gradient(
+            to left,
+            rgba(3, 3, 3, 1),
+            rgba(3, 3, 3, 0)
+        );
+    }
+}
+
+.customSwiper {
+    overflow: visible;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Pagination bullets */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginationBullet {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.paginationBulletActive {
+    background-color: #034cff;
+    width: 20px;
+    height: 6px;
+    border-radius: 4px;
+    opacity: 1;
+}

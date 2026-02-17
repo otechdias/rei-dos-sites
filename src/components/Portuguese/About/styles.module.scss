@@ -1,0 +1,67 @@
+.container {
+  background: url("/last.svg") lightgray 0px -38.04px / 100% 107.977% no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: 768px) {
+    background-position: 60% center;
+  }
+}
+
+.content {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-block: 200px;
+  @media screen and (max-width: 768px) {
+    padding-block: 150px;
+    padding-inline: 45px;
+  }
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-left: 81px;
+  gap: 20px;
+  @media screen and (max-width: 768px) {
+    padding-left: 0px;
+  }
+}
+
+.title {
+  h2 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 57.6px;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    span {
+      color: #4b3cff;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  max-width: 620px;
+  h5 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    span {
+      color: #4b3cff;
+    }
+  }
+}

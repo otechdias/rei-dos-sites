@@ -1,0 +1,164 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  align-items: center;
+  padding-block: 50px;
+  gap: 40px;
+  position: relative; /* Para os pseudo-elementos */
+  overflow: hidden; /* Esconde conteúdos que saem do contêiner */
+
+  /* Imagem e gradiente combinados */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Certifique-se de que está atrás dos cartões */
+    background: url("/gradient.svg") center/cover no-repeat;
+    pointer-events: none; /* Permite interação nos elementos abaixo */
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-inline: 20px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #e6e4ed;
+    font-family: Montserrat;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    span {
+      color: rgba(162, 158, 177, 0.8);
+      padding-inline: 5px;
+    }
+  }
+  p {
+    color: #6154f9;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  img {
+    @media screen and (max-width: 768px) {
+      max-width: 650px;
+    }
+  }
+}
+
+.middleTop,
+.middleBottom {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  gap: 20px;
+
+  & > div {
+    display: flex;
+    gap: 20px;
+    animation: scroll linear infinite;
+  }
+}
+
+.middleTop > div {
+  animation-duration: 20s; // Velocidade do movimento superior
+}
+
+.middleBottom > div {
+  animation-duration: 20s; // Velocidade do movimento inferior
+  animation-direction: reverse; // Movimento contrário
+}
+
+.card {
+  flex-shrink: 0;
+  width: 300px;
+  border-radius: 12px;
+  border: 1px solid rgba(230, 228, 237, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media screen and (max-width: 768px) {
+    width: 200px;
+  }
+  p {
+    color: #e6e4ed;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+    max-width: 320px;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 40px;
+    border-radius: 50%;
+    @media screen and (max-width: 768px) {
+      width: 30px;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    color: #e6e4ed;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  span {
+    color: rgba(162, 158, 177, 0.8);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

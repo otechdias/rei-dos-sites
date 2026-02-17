@@ -1,0 +1,43 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  align-items: center;
+  padding-block: 50px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 20px;
+  }
+}
+
+.container {
+  border-top: rgba(156, 163, 175, 0.1) 1px solid;
+}
+
+.leftside {
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #9ca3af;
+    font-family: Montserrat;
+  }
+}
+
+.rightside {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  p {
+    color: #9ca3af;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+  }
+  hr {
+    border: 1px solid #9ca3af;
+    height: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+/* styles/Home.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  transition: background-color 1s;
+}
+
+.main {
+  font-size: 2rem;
+  padding: 0 2rem;
+  flex-grow: 1;
+}

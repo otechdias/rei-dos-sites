@@ -1,0 +1,146 @@
+.container {
+  background: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  h2 {
+    color: #3323f4;
+    text-align: center;
+    font-family: Syne;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 51.2px;
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+}
+
+.crypto,
+.mentor {
+  display: flex;
+  padding-inline: 100px;
+  gap: 80px;
+  padding-block: 80px;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    position: relative;
+    padding-inline: 32px;
+    gap: 0px;
+  }
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: right;
+  h4 {
+    color: #3323f4;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  h5 {
+    color: #3323f4;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: right;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+  h5 {
+    color: #3323f4;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.hr {
+  width: 548px;
+  height: 9px;
+  flex-shrink: 0;
+  background: #4b3cff;
+  box-shadow: 0px 10px 50px 0px #4b3cff;
+  border: none;
+  @media screen and (max-width: 768px) {
+    width: 350px;
+  }
+}
+
+.rightsideMentor {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+  h4 {
+    color: #3323f4;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+}
+
+@keyframes dimAnimation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  } // Adjust this value to control the dimming effect
+}
+
+// Targeting specific images for the dimming effect
+.leftside img,
+.leftsideMentor img {
+  // animation: dimAnimation 7s infinite;
+  z-index: 0;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

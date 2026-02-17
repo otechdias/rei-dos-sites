@@ -1,0 +1,103 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  align-items: center;
+  padding-block: 50px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 50px;
+    padding-inline: 20px;
+  }
+}
+
+.leftside {
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    span {
+      color: rgba(162, 158, 177, 0.8);
+      padding-inline: 5px;
+    }
+  }
+  p {
+    color: #6154f9;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  button {
+    text-transform: uppercase;
+    background-color: #4b3cff;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #675aff;
+      color: #fff;
+      transform: translateY(-3px); /* Eleva levemente o botão */
+      box-shadow: 0 4px 15px rgba(75, 60, 255, 0.5); /* Efeito de brilho */
+    }
+
+    &:active {
+      transform: translateY(0); /* Remove a elevação ao clicar */
+      box-shadow: none;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: Montserrat;
+  }
+  h5 {
+    color: rgba(230, 228, 237, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+  }
+}

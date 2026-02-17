@@ -1,0 +1,105 @@
+.zoomSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: Syne;
+  align-items: center;
+  background-color: #040122; /* Cor inicial de fundo */
+  position: relative;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #040122; /* Cor inicial do texto */
+  @media only screen and (max-width: 768px) {
+    padding-inline: 20px;
+  }
+}
+
+.zoomText {
+  font-family: Syne;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  transform-origin: center center;
+  position: absolute;
+
+  span {
+    position: relative;
+    display: inline;
+    background: linear-gradient(
+      270deg,
+      #00c2ff,
+      #33ff8c,
+      #ffc640,
+      #e54cff,
+      #00c2ff,
+      #33ff8c
+    );
+    background-size: 600% auto;
+    color: transparent;
+    background-clip: text;
+    animation: shift 5s linear infinite;
+  }
+}
+
+// .nextText {
+//   font-size: 48px;
+//   text-align: center;
+//   font-weight: 900;
+//   color: #040122;
+//   position: absolute;
+//   // top: 80%; /* Start below the viewport */
+//
+//   opacity: 1; /* Start with very low opacity */
+// }
+.nextText {
+  font-size: 48px;
+  text-align: center;
+  font-family: Syne;
+  font-weight: 900;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+  color: #040122;
+  text-align: left;
+  bottom: 0; /* Inicia na parte inferior */
+  transform: translateY(100%); /* Posiciona abaixo da viewport */
+
+  opacity: 0; /* Inicia com opacidade baixa */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nextTextMobile {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 900;
+  color: #040122;
+  display: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media only screen and (max-width: 768px) {
+    display: block;
+    font-size: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  bottom: 0; /* Inicia na parte inferior */
+  transform: translateY(100%); /* Posiciona abaixo da viewport */
+
+  opacity: 0; /* Inicia com opacidade baixa */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
+}
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

@@ -1,0 +1,27 @@
+.container {
+  background-color: #4b3cff;
+}
+
+.content {
+  display: flex;
+  padding-block: 10px;
+  justify-content: center;
+
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Sora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35.2px;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 22.2px;
+    }
+    strong {
+      padding-left: 5px;
+      font-weight: 700;
+    }
+  }
+}

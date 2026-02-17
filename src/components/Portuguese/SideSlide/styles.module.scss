@@ -1,0 +1,265 @@
+.horizontalScrollContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  position: relative;
+  width: 100%;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  & > div {
+    flex: 0 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+  }
+}
+
+.sectionOne {
+  background: rgba(51, 35, 244, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 43px;
+    position: sticky;
+    left: 0%;
+    transform: translateX(-0%);
+  }
+}
+
+// Example of transition effects
+.transitionBackground {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease; // Adjust timing and easing as needed
+}
+
+.darkBackground {
+  background-color: rgba(4, 1, 34, 0.9); // Your desired background
+  color: white; // Assuming you want the text color to change too
+}
+
+.lightBackground {
+  background-color: transparent; // Or any other color for the 'light' state
+  color: black; // Color for text in the 'light' state
+}
+
+.sectionTwo {
+  background: linear-gradient(rgba(4, 1, 34, 0.9), rgba(4, 1, 34, 0.9)),
+    url("/figma.svg");
+  background-size: cover; /* Cover the entire area of the element */
+  background-position: center;
+}
+
+.contentTwo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 285px;
+  padding-block: 285px;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  h4 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+  }
+  h3 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  h5 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+  }
+}
+
+.hr {
+  background: #3323f4;
+  box-shadow: 0px 10px 50px 0px rgba(51, 35, 244, 0.56);
+  width: 706px;
+  height: 9px;
+  flex-shrink: 0;
+  border: none;
+}
+
+.sectionThree {
+  background: radial-gradient(
+      290.23% 290.23% at 50% 50%,
+      rgba(4, 1, 34, 0.8) 0%,
+      rgba(51, 35, 244, 0.8) 100%
+    ),
+    url("/computer.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contentThree {
+  display: flex;
+  flex-direction: column;
+
+  padding-block: 285px;
+  align-items: flex-end;
+  gap: 20px;
+  text-align: end;
+  position: sticky;
+  right: 0%;
+  transform: translateX(-0%);
+  h4 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+  }
+  h3 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+  }
+}
+
+.sectionFour {
+  background: linear-gradient(rgba(4, 1, 34, 0.9), rgba(4, 1, 34, 0.9)),
+    url("/moneyBox.svg");
+  background-size: cover; /* Cover the entire area of the element */
+  background-position: center;
+}
+
+.contentFour {
+  display: flex;
+  flex-direction: column;
+  padding-left: 285px;
+  padding-block: 285px;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  h4 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+  }
+  h3 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+  }
+}
+
+.sectionFive {
+  background: radial-gradient(
+      290.23% 290.23% at 50% 50%,
+      rgba(4, 1, 34, 0.8) 0%,
+      rgba(51, 35, 244, 0.8) 100%
+    ),
+    url("/digits.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contentFive {
+  display: flex;
+  flex-direction: column;
+  padding-block: 285px;
+  align-items: flex-end;
+  gap: 20px;
+  text-align: end;
+  position: sticky;
+  right: 0%;
+  transform: translateX(-0%);
+  h4 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+  }
+  h3 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+  }
+}
+
+.sectionSix {
+  background: linear-gradient(rgba(4, 1, 34, 0.9), rgba(4, 1, 34, 0.9)),
+    url("/city.svg");
+  background-size: cover; /* Cover the entire area of the element */
+  background-position: center;
+}
+
+.contentSix {
+  display: flex;
+  flex-direction: column;
+  padding-left: 285px;
+  padding-block: 285px;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  h4 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+  }
+  h3 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 51.2px;
+  }
+}

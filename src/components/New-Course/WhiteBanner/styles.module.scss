@@ -1,0 +1,210 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  align-items: center;
+  padding-block: 50px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-inline: 20px;
+    gap: 40px;
+  }
+
+  img {
+    &.rotate {
+      position: absolute;
+      top: -5%;
+      right: -1%;
+      z-index: 10;
+      width: 150px;
+      animation: rotate 15s linear infinite;
+      @media screen and (max-width: 768px) {
+        width: 100px;
+        top: 39%;
+        right: -4%;
+      }
+    }
+  }
+}
+
+.leftside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1e1e1e;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    span {
+      color: rgba(30, 30, 30, 0.6);
+      padding-inline: 5px;
+    }
+  }
+  h5 {
+    color: rgba(30, 30, 30, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .filled {
+    text-transform: uppercase;
+    background-color: #6154f9;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #7f56d9;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(97, 84, 249, 0.5);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  button {
+    text-transform: uppercase;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+    font-family: Montserrat;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      color: #6154f9;
+      transform: scale(1.05);
+      background: rgba(97, 84, 249, 0.1);
+      box-shadow: 0 4px 15px rgba(97, 84, 249, 0.3);
+    }
+
+    &:active {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.buttons2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .filled {
+    text-transform: uppercase;
+    background-color: #6154f9;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Montserrat;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #7f56d9;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(97, 84, 249, 0.5);
+    }
+  }
+
+  button {
+    text-transform: uppercase;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+    font-family: Montserrat;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      color: #6154f9;
+      background: rgba(97, 84, 249, 0.1);
+    }
+  }
+}
